@@ -249,8 +249,10 @@ namespace
         [session setPreferredIOBufferDuration:bufferSecs error:&err];
         CK_ASSERT(err == nil);
 
+        [session setCategory:AVAudioSessionCategoryPlayback error:&err];
         [session setActive:NO error:&err];
         [session setActive:YES error:&err];
+        
         CK_ASSERT(err == nil);
 
         g_sampleRate = session.sampleRate;
