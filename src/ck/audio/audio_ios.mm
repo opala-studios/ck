@@ -52,30 +52,30 @@ namespace
     self = [super init];
     if (self) 
     {
-        if (Cki::SystemIos::get()->isVersionGreaterThanOrEqualTo("8.0"))
-        {
-            [[NSNotificationCenter defaultCenter] 
-                addObserver:self 
-                selector:@selector(onMusicPlayerPlaybackStateChanged:)
-                name:MPMusicPlayerControllerPlaybackStateDidChangeNotification 
-                object:[MPMusicPlayerController systemMusicPlayer]
-            ];
-        }
-        if (Cki::SystemIos::get()->isVersionGreaterThanOrEqualTo("6.0"))
-        {
-            [[NSNotificationCenter defaultCenter] 
-                addObserver:self 
-                selector:@selector(onAudioSessionInterruption:)
-                name:AVAudioSessionInterruptionNotification 
-                object:[AVAudioSession sharedInstance]
-                ];
-            [[NSNotificationCenter defaultCenter] 
-                addObserver:self 
-                selector:@selector(onAppDidBecomeActive:)
-                name:UIApplicationDidBecomeActiveNotification 
-                object:nil
-                ];
-        }
+//        if (Cki::SystemIos::get()->isVersionGreaterThanOrEqualTo("8.0"))
+//        {
+//            [[NSNotificationCenter defaultCenter]
+//                addObserver:self
+//                selector:@selector(onMusicPlayerPlaybackStateChanged:)
+//                name:MPMusicPlayerControllerPlaybackStateDidChangeNotification
+//                object:[MPMusicPlayerController systemMusicPlayer]
+//            ];
+//        }
+//        if (Cki::SystemIos::get()->isVersionGreaterThanOrEqualTo("6.0"))
+//        {
+//            [[NSNotificationCenter defaultCenter]
+//                addObserver:self
+//                selector:@selector(onAudioSessionInterruption:)
+//                name:AVAudioSessionInterruptionNotification
+//                object:[AVAudioSession sharedInstance]
+//                ];
+//            [[NSNotificationCenter defaultCenter]
+//                addObserver:self
+//                selector:@selector(onAppDidBecomeActive:)
+//                name:UIApplicationDidBecomeActiveNotification
+//                object:nil
+//                ];
+//        }
     }
     return self;
 }
