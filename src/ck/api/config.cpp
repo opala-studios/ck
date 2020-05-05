@@ -6,7 +6,7 @@
 
 #if CK_PLATFORM_IOS || CK_PLATFORM_OSX || CK_PLATFORM_TVOS
 // seems to require multiples of 2.6667ms; 5.5 rounds down to 5.3333
-const float CkConfig_audioUpdateMsDefault = 5.5f;
+const float CkConfig_audioUpdateMsDefault = 5.5f * 4;
 #else
 const float CkConfig_audioUpdateMsDefault = 5.0f;
 #endif
